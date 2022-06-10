@@ -1,9 +1,9 @@
 format = (->
-  '%a, %B %e %Y' + '\n' +'%H:%M'
+  '%I:%M'
 )()
 
 #brightness 0 - 10
-brightness = 10
+brightness = 7
 
 command: "whoami;date +\"#{format}\";pmset -g batt | grep -o '[0-9]*%'"
 
@@ -17,23 +17,21 @@ update: (output) ->
     #output = "vecnehladny\nMon April 13 2020\n15:02\n70%"
     data = output.split('\n')
     
-    hashCount = data[3].replace("%", '')/10
+    hashCount = data[2].replace("%", '')/10
     dotCount = 10 - hashCount
     user = data[0]
 
-    html = "<div class='wrapper'><div class='watch'><div class='bash'>#{user}@host: ~ $ now</div><div class='time'>[TIME]<span class='timeData'>"
-    html += data[2]
-    html += "</span></div><div class='date'>[DATE]<span class='dateData'>"
+    html = "<div class='wrapper'><div class='watch'><div class='bash'>#{user}$ date</div><div class='time'>[TIME]<span class='timeData'>"
     html += data[1]
     html += "</span></div><div class='batt'><span>[BATT]</span><span class='battData'>"
     html += "["
     for i in [0...hashCount]
-      html += "#"
+      html += "■"
     for i in [0...dotCount]
-      html += "."   
+      html += "×"   
     html += "] "
-    html += data[3]
-    html += "</span></div><div class='bash'>#{user}@host: ~ $</div></div></div>"
+    html += data[2]
+    html += "</span></div><div class='bash'>#{user}$</div></div></div>"
 
     $(terminal).html(html)
   
@@ -57,8 +55,8 @@ style: (->
       font-family: Menlo
       position: absolute
       width: auto
-      top: 50%
-      left: 50%
+      top: 6%
+      left: 8%
       transform: translate(-50%, -50%)
 
     .watch

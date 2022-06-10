@@ -1,23 +1,27 @@
 # BASH TERMINAL widget
-A simple bash terminal styled widget for Übersicht. The reason of its creation was that i saw something similar on Reddit and i decided to recreate it. And also fun little project in JavaScript/CoffeScript.
+My slight modification of Viktor's Widget
 
 ![Screenshot](screenshot1.png)
+![Screenshot](screenshot.png)
 
 ## Features
 **Clock**
-
-**Date**
 
 **Username**
 
 **Battery status**
 
+## Modified Features
+**12 Hour Clock**
+
+**Username similar to my terminal**
+
+**Ascii Characters for Battery**
  
 ## Instalation
-1. Download and install Übersicht from their [website](http://tracesof.net/uebersicht/)
-2. Clone this repository or download a [zip file](terminal.widget.zip)
+1. Clone this repository or download a [zip file](terminal.widget.zip)
 ```
-git clone https://github.com/vecnehladny/ubersicht-termina-widget ~/Library/Application\ Support/Übersicht/widgets/ubersicht-termina-widget/
+git clone https://github.com/DeathWired/ubersicht-termina-widget ~/Library/Application\ Support/Übersicht/widgets/ubersicht-termina-widget/
 ```
 
 ## Requirements
