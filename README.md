@@ -14,11 +14,10 @@ My slight modification of Viktor's Widget
 ## Modified Features
 **12 Hour Clock**
 
-**Username similar to my terminal**
+**Uses username and hostname**
 
-**Ascii Characters for Battery**
  
-## Instalation
+## Installation
 1. Clone this repository or download a [zip file](terminal.widget.zip)
 ```
 git clone https://github.com/DeathWired/ubersicht-termina-widget ~/Library/Application\ Support/Übersicht/widgets/ubersicht-termina-widget/
@@ -35,4 +34,3 @@ brightness = 10
 
 ## Enjoy!
 Fork it, learn with it, do whatever with it. Just remember to have fun!
-
