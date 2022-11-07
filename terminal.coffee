@@ -5,7 +5,7 @@ format = (->
 #brightness 0 - 10
 brightness = 7
 
-command: "whoami;date +\"#{format}\";pmset -g batt | grep -o '[0-9]*%'"
+command: "whoami;date +\"#{format}\";date +%H;pmset -g batt | grep -o '[0-9]*%';hostname -s"
 
 refreshFrequency: 10000
 
@@ -14,24 +14,27 @@ render: (output) -> """
 """
 
 update: (output) ->
-    #output = "vecnehladny\nMon April 13 2020\n15:02\n70%"
     data = output.split('\n')
     
-    hashCount = data[2].replace("%", '')/10
+    hashCount = data[3].replace("%", '')/10
     dotCount = 10 - hashCount
     user = data[0]
-
-    html = "<div class='wrapper'><div class='watch'><div class='bash'>#{user}$ date</div><div class='time'>[TIME]<span class='timeData'>"
+    hours=data[2]
+    device=data[4]
+    html = "<div class='wrapper'><div class='watch'><div class='bash'>#{device}:~ #{user}$ date</div><div class='time'>[TIME]<span class='timeData'>"
     html += data[1]
+    # html += " "+ampm
+    # html += "</span></div><div class='date'>[DATE]<span class='dateData'>"
+    # html += data[1]
     html += "</span></div><div class='batt'><span>[BATT]</span><span class='battData'>"
     html += "["
     for i in [0...hashCount]
-      html += "■"
+      html += "#"
     for i in [0...dotCount]
-      html += "×"   
+      html +="_"   
     html += "] "
-    html += data[2]
-    html += "</span></div><div class='bash'>#{user}$</div></div></div>"
+    html += data[3]
+    html += "</span></div><div class='bash'>#{device}:~ #{user}$</div></div></div>"
 
     $(terminal).html(html)
   
@@ -52,7 +55,7 @@ style: (->
       height: 100%
 
     .wrapper
-      font-family: Menlo
+      font-family: Fira Code
       position: absolute
       width: auto
       top: 6%
