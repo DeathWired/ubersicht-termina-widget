@@ -1,5 +1,5 @@
 # Bash Terminal Widget
-![](screenshot1.png)
+![](screenshot.png)
 ![](screenshot0.png)
 I'm Matt and this is my modification of [vecnehladny's](https://github.com/vecnehladny/ubersicht-termina-widget) Terimnal widget for Übersicht, with inspiration from [IndraSigicharla's](https://github.com/IndraSigicharla/ubersicht-terminal-widget) fork.
 ## Modifications
