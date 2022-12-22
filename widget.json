@@ -1,6 +1,11 @@
 {
   "name": "bash terminal widget",
   "description": "Simple bash terminal styled widget for Übersicht",
+<<<<<<< HEAD
   "author": "Matt Flynn (DeafWired)",
   "email": "mteamspam@gmail.com"
+=======
+  "author": "Viktor Klíma (vecnehladny)",
+  "email": "viktorklima@yahoo.com"
+>>>>>>> 3dc3eba544e51587062ee9b3c27a1af1e7a2d3d3
 }
