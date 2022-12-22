@@ -1,34 +1,15 @@
-# BASH TERMINAL widget
-A simple bash terminal styled widget for Übersicht. The reason of its creation was that i saw something similar on Reddit and i decided to recreate it. And also fun little project in JavaScript/CoffeScript.
-
-![Screenshot](screenshot1.png)
-
-## Features
-**Clock**
-
-**Date**
-
-**Username**
-
-**Battery status**
-
- 
-## Instalation
-1. Download and install Übersicht from their [website](http://tracesof.net/uebersicht/)
-2. Clone this repository or download a [zip file](terminal.widget.zip)
-```
-git clone https://github.com/vecnehladny/ubersicht-termina-widget ~/Library/Application\ Support/Übersicht/widgets/ubersicht-termina-widget/
-```
-
+# Bash Terminal Widget
+![](screenshot1.png)
+![](screenshot0.png)
+I'm Matt and this is my modification of [vecnehladny's](https://github.com/vecnehladny/ubersicht-termina-widget) Terimnal widget for Übersicht, with inspiration from [IndraSigicharla's](https://github.com/IndraSigicharla/ubersicht-terminal-widget) fork.
+## Modifications
+* Made the text portion similar to bash terminal input
+* Added nerd font symbols for time and battery
+* Added battery coloring based on percent
+* Added arrow for if you are losing power or gaining it
 ## Requirements
-1. Übersicht of course
-
-## Customization
-You can set brightness of the neon effect
-```
-brightness = 10
-```
-
-## Enjoy!
-Fork it, learn with it, do whatever with it. Just remember to have fun!
-
+1. [Übersicht](http://tracesof.net/uebersicht/)
+2. [Fira code nerd font](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/FiraCode.zip) (or any other nerd font)
+## Other widgets i use
+* [Calander](https://github.com/felixhageloh/uebersicht-widgets/tree/master/calendar) by [Adam Vaughan](https://github.com/adamvaughan)
+* [Os Version pro](https://github.com/mpen01/os-version-pro) by [Mike Pennella](https://github.com/mpen01/)
